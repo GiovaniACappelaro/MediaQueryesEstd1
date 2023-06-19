@@ -1,0 +1,42 @@
+h1{
+    color: red;
+}
+
+/* 2. sintaxe media query*/
+
+@media screen and (max-width: 500px){
+    /* max-width -> tela até 500px */
+    h1{
+        color: blue;
+    }
+}
+
+/* 3.Outros modos:
+    screen, print, speetch, all
+*/
+
+@media print and (max-width: 600px){
+    /*modificações ao printar a tela */
+    h1{
+        color: green;
+    }
+}
+
+/*todos os modos */
+@media (max-width: 700px){
+    h2{
+        color: purple;
+    }
+}
+
+/* 5. mobile-first 
+-> Foco no uso de min-width
+*/
+
+@media (min-width: 200px){
+    /*telas MAIORES que 200px */
+    h2{
+        color: teal;
+    }
+}
+
