@@ -22,7 +22,9 @@ h1{
     }
 }
 
-/*todos os modos */
+/*todos os modos (all)
+    -> All já é o default, basta não colocar a media
+*/
 @media (max-width: 700px){
     h2{
         color: purple;
@@ -40,3 +42,94 @@ h1{
     }
 }
 
+
+/* 6. AND na media query*/
+
+@media (min-width: 300px) and (max-width: 400px){
+    /*afeta esse intervalo de 100 px 
+    -> não precisa do max se ja tiver outros min-width */
+    h3{
+        font-size: 3em;
+    }
+}
+
+/* 7. Orientation */
+
+@media (orientation: landscape){
+    /*landscape = tela deitada / horizontal */
+
+    h3{
+        color: brown;
+    }
+
+}
+
+/* 8. OR media queryes */
+
+
+@media (max-width: 200px), (orientation: landscape){
+    h3{
+        font-size: 4em;
+    }
+}
+
+/* 9. Cuidado nas media queryes 
+    ORDEM IMPORTA (cima pra baixo)
+*/
+
+h4{
+    color: blue;
+}
+
+@media (min-width: 600px){
+    h4{
+        color: red;
+    }
+}
+
+/*se colocasse a regra do h4 depois, ficaria tudo azul,
+independente da media query 
+-> O que vem depois, sobrescreve o de antes
+-> IDEAl: separar regras sem media queryes em cima e com media queryes em baixo;
+*/
+
+
+/*10 -Breakpoints Media queryes */
+
+h5{
+    font-size: 3em;
+}
+
+/* 320px - 480px = mobile */
+/* Em mobile first não precisa de MQ */
+h5 {
+    color: aqua;
+  }
+  
+  /* 480px - 768px = tablet */
+  @media (min-width: 480px) {
+    h5 {
+      color: burlywood;
+    }
+  }
+  
+  /* 768px - 1024px = telas menores, laptops */
+  @media (min-width: 768px) {
+    h5 {
+      color: cadetblue;
+    }
+  }
+  
+  /* 1024px - 1200px = desktop */
+  @media (min-width: 1024px) {
+    h5 {
+      color: coral;
+    }
+  }
+  
+  /* 1200 e + = telas maiores, tvs */
+  @media (min-width: 1200px) {
+    h5 {
+      color: darkorchid;
+    }
+  }
